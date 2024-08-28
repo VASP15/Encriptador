@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__menu">
+            <a class="header__menu__link" href="https://www.aluracursos.com/">
+                <img src="./assets/alura.png" alt="Alura Logo" id="Alura__Logo">
+             </a>
+               
+        </nav>
+    </header>
+
+    <section class="contenido__encriptador">
+        <section class="input__data">
+            <section class="contenedor__escritura">
+                <div class="mensaje__escritura">
+                    <textarea   
+                        name="escritura__texto"
+                        class="escritura__texto"
+                        id="escritura__texto"
+                        cols="30"
+                        rows="10"
+                        placeholder="Ingrese el texto aquí"
+                    ></textarea>
+                    <div class="terminos">
+                        <img src="./assets/alerta.png" id="alerta" alt="Alerta sobre caracteres permitidos">
+                        <p>Solo letras minúsculas y sin acentos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="botones__encriptador">
+                <button class="boton__encriptar" type="button" onclick="encriptar()">Encriptar</button>
+                <button class="boton__desencriptar" type="button" onclick="desencriptar()">Desencriptar</button> 
+            </div> 
+        </section>
+
+        <section class="output__data">
+            <section class="contenedor__resultado">
+                <img src="./assets/not_found.png" alt="Sin resultado" id="no_found">
+                <div class="mensaje__resultado" id="mensaje-resultado">
+                    <h2 id="no__mensaje">Ningún mensaje fue encontrado</h2>
+                    <p id="ingresar__mensaje">Ingresa el texto que desees encriptar o desencriptar.</p>
+            
+                    <textarea readonly
+                        name="resultado__texto"
+                        class="resultado__texto"
+                        id="resultado__texto"
+                        cols="100"
+                        rows="10"
+                        placeholder=""
+                    ></textarea>
+                    </div>
+
+                    
+                    <div class="copiar__area">
+                        <button class="boton__copiar" type="button" onclick="copiar()">
+                            <img src="./assets/copy.png" alt="Botón de copiar" id="icono__copiar">
+                        </button>
+                    </div>
+            </section>
+        </section>
+
+        <div id="popup" class="popup">Texto secreto copiado, información privilegiada</div>
+
+    </section> 
+    
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>
